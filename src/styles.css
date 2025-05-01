@@ -1,0 +1,14 @@
+
+/* Fondo de la página con gradiente */
+body {
+    background-color: rgb(10, 79, 146);
+    background-image: linear-gradient(rgb(0, 161, 224) 10%, rgb(10, 79, 146) 100%);
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+  }
+  

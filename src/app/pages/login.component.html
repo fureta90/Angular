@@ -1,0 +1,33 @@
+<mat-card class="login-card">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <!-- Imagen arriba del título -->
+    <img src="../../assets/img/Get-Control_Logo.webp" alt="Logo" class="login-logo" />
+
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput formControlName="username" required />
+      <mat-error *ngIf="form.get('username')?.hasError('required')">
+        El usuario es obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" formControlName="password" required />
+      <mat-error *ngIf="form.get('password')?.hasError('required')">
+        La contraseña es obligatoria
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+      Ingresar
+    </button>
+    <div class="extra-links">
+      <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
+      <span> | </span>
+      <a routerLink="/registro">Crear cuenta nueva</a>
+    </div>
+    
+  </form>
+</mat-card>
