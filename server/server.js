@@ -1,6 +1,6 @@
 // server/server.js
+import express from 'express';  // Importación por defecto
 
-const express = require('express');
 const path = require('path');
 
 const app = express();
